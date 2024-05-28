@@ -1,0 +1,756 @@
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-inner slimscroll">
+    <div id="sidebar-menu" class="sidebar-menu">
+      <ul>
+        <li class="menu-title">Main</li>
+        <li class="submenu">
+          <a
+                href="<%- routes.doctor_dashboard %>"
+                class="<%= active_path==routes.doctor_dashboard ? 'active' : '' %>"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-01.svg" alt=""
+            /></span>
+            <span> Dashboard </span>
+           </a>
+
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-02.svg" alt=""
+            /></span>
+            <span> Doctors </span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.doctors %>"
+                class="<%= active_path==routes.doctors ? 'active' : '' %>"
+                >Doctor List</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.add_doctor %>"
+                class="<%= active_path==routes.add_doctor ? 'active' : '' %>"
+                >Add Doctor</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.edit_doctor %>"
+                class="<%= active_path==routes.edit_doctor ? 'active' : '' %>"
+                >Edit Doctor</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.doctor_profile %>"
+                class="<%= (active_path==routes.doctor_profile || active_path==routes.doctor_setting) ? 'active' : '' %>"
+                >Doctor Profile</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-03.svg" alt=""
+            /></span>
+            <span>Patients </span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.patients %>"
+                class="<%= active_path==routes.patients ? 'active' : '' %>"
+                >Patients List</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.add_patient %>"
+                class="<%= active_path==routes.add_patient ? 'active' : '' %>"
+                >Add Patients</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.edit_patient %>"
+                class="<%= active_path==routes.edit_patient ? 'active' : '' %>"
+                >Edit Patients</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.patient_profile %>"
+                class="<%= active_path==routes.patient_profile || active_path==routes.patient_setting ? 'active' : '' %>"
+                >Patients Profile</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-08.svg" alt=""
+            /></span>
+            <span> Staff </span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.staff_list %>"
+                class="<%= active_path==routes.staff_list ? 'active' : '' %>"
+                >Staff List</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.add_staff %>"
+                class="<%= ( active_path==routes.add_staff || active_path==routes.edit_staff ) ? 'active' : '' %>"
+                >Add Staff</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.staff_profile %>"
+                class="<%= ( active_path==routes.staff_profile || active_path==routes.staff_setting ) ? 'active' : '' %>"
+                >Staff Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.staff_leave %>"
+                class="<%= ( active_path==routes.staff_leave || active_path==routes.add_leave || active_path==routes.edit_leave ) ? 'active' : '' %>"
+                >Leaves</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.staff_holidays %>"
+                class="<%= active_path==routes.staff_holidays ? 'active' : '' %>"
+                >Holidays</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.staff_attendance %>"
+                class="<%= active_path==routes.staff_attendance ? 'active' : '' %>"
+                >Attendance</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-04.svg" alt=""
+            /></span>
+            <span> Appointments </span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.appointments %>"
+                class="<%= active_path==routes.appointments ? 'active' : '' %>"
+                >Appointment List</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.add_appointment %>"
+                class="<%= active_path==routes.add_appointment ? 'active' : '' %>"
+                >Book Appointment</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.edit_appointment %>"
+                class="<%= active_path==routes.edit_appointment ? 'active' : '' %>"
+                >Edit Appointment</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-05.svg" alt=""
+            /></span>
+            <span> Doctor Schedule </span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.schedule %>"
+                class="<%= active_path==routes.schedule ? 'active' : '' %>"
+                >Schedule List</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.add_schedule %>"
+                class="<%= active_path==routes.add_schedule ? 'active' : '' %>"
+                >Add Schedule</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.edit_schedule %>"
+                class="<%= active_path==routes.edit_schedule ? 'active' : '' %>"
+                >Edit Schedule</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-06.svg" alt=""
+            /></span>
+            <span> Departments </span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.departments %>"
+                class="<%= active_path==routes.departments ? 'active' : '' %>"
+                >Department List</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.add_department %>"
+                class="<%= active_path==routes.add_department ? 'active' : '' %>"
+                >Add Department</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.edit_department %>"
+                class="<%= active_path==routes.edit_department ? 'active' : '' %>"
+                >Edit Department</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-07.svg" alt=""
+            /></span>
+            <span> Accounts </span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.invoices %>"
+                class="<%= ( active_path==routes.invoices || active_path==routes.create_invoice || active_path==routes.edit_invoice || active_path==routes.invoices_view ) ? 'active' : '' %>"
+                >Invoices</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.payments %>"
+                class="<%= ( active_path==routes.payments || active_path==routes.add_payment || active_path==routes.edit_payment ) ? 'active' : '' %>"
+                >Payments</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.expenses %>"
+                class="<%= ( active_path==routes.expenses || active_path==routes.add_expense || active_path==routes.edit_expense ) ? 'active' : '' %>"
+                >Expenses</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.taxes %>"
+                class="<%= ( active_path==routes.taxes || active_path==routes.add_tax || active_path==routes.edit_tax ) ? 'active' : '' %>"
+                >Taxes</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.provident_fund %>"
+                class="<%= ( active_path==routes.provident_fund || active_path==routes.add_provident_fund || active_path==routes.edit_provident_fund ) ? 'active' : '' %>"
+                >Provident Fund</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-09.svg" alt=""
+            /></span>
+            <span> Payroll </span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.salary %>"
+                class="<%= active_path==routes.salary || active_path==routes.add_salary || active_path==routes.edit_salary ? 'active' : '' %>"
+              >
+                Employee Salary
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.salary_view %>"
+                class="<%= active_path==routes.salary_view ? 'active' : '' %>"
+              >
+                Payslip
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="<%- routes.chat %>"
+            class="<%= active_path==routes.chat ? 'active' : '' %>"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-10.svg" alt=""
+            /></span>
+            <span>Chat</span></a
+          >
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-11.svg" alt=""
+            /></span>
+            <span> Calls</span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.voice_call %>"
+                class="<%= active_path==routes.voice_call ? 'active' : '' %>"
+                >Voice Call</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.video_call %>"
+                class="<%= active_path==routes.video_call ? 'active' : '' %>"
+                >Video Call</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.incoming_call %>"
+                class="<%= active_path==routes.incoming_call ? 'active' : '' %>"
+                >Incoming Call</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-12.svg" alt=""
+            /></span>
+            <span> Email</span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.compose %>"
+                class="<%= active_path==routes.compose ? 'active' : '' %>"
+                >Compose Mail</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.inbox %>"
+                class="<%= active_path==routes.inbox ? 'active' : '' %>"
+                >Inbox</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.mail_view %>"
+                class="<%= active_path==routes.mail_view ? 'active' : '' %>"
+                >Mail View</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-13.svg" alt=""
+            /></span>
+            <span> Blog</span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.blog %>"
+                class="<%= active_path==routes.blog ? 'active' : '' %>"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.blog_details %>"
+                class="<%= active_path==routes.blog_details ? 'active' : '' %>"
+                >Blog View</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.add_blog %>"
+                class="<%= active_path==routes.add_blog ? 'active' : '' %>"
+                >Add Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.edit_blog %>"
+                class="<%= active_path==routes.edit_blog ? 'active' : '' %>"
+                >Edit Blog</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="<%- routes.assets %>"
+            class="<%= active_path==routes.assets || active_path==routes.add_asset || active_path==routes.edit_asset ? 'active' : '' %>"
+            ><i class="fa fa-cube"></i> <span>Assets</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="<%- routes.activities %>"
+            class="<%= active_path==routes.activities ? 'active' : '' %>"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-14.svg" alt=""
+            /></span>
+            <span>Activities</span></a
+          >
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><i class="fa fa-flag"></i> <span> Reports </span>
+            <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.expense_reports %>"
+                class="<%= active_path==routes.expense_reports ? 'active' : '' %>"
+              >
+                Expense Report
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.invoice_reports %>"
+                class="<%= active_path==routes.invoice_reports ? 'active' : '' %>"
+              >
+                Invoice Report
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-15.svg" alt=""
+            /></span>
+            <span> Invoice </span> <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.invoices_list %>"
+                class="<%= ( active_path==routes.invoices_list || active_path==routes.invoices_paid || active_path==routes.invoices_overdue || active_path==routes.invoices_draft || active_path==routes.invoices_recurring || active_path==routes.invoices_cancelled) ? 'active' : '' %>"
+              >
+                Invoices List
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.invoices_grid %>"
+                class="<%= active_path==routes.invoices_grid ? 'active' : '' %>"
+              >
+                Invoices Grid</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.add_invoice %>"
+                class="<%= active_path==routes.add_invoice ? 'active' : '' %>"
+              >
+                Add Invoices</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.edit_invoices %>"
+                class="<%= active_path==routes.edit_invoices ? 'active' : '' %>"
+              >
+                Edit Invoices</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.view_invoice %>"
+                class="<%= active_path==routes.view_invoice ? 'active' : '' %>"
+              >
+                Invoices Details</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.invoices_settings %>"
+                class="<%= ( active_path==routes.invoices_settings || active_path==routes.tax_settings || active_path==routes.bank_settings ) ? 'active' : '' %>"
+              >
+                Invoices Settings</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a
+            href="<%- routes.settings %>"
+            class="<%= active_path==routes.settings || active_path==routes.localization_details || active_path==routes.payment_settings || active_path==routes.email_settings || active_path==routes.social_settings || active_path==routes.social_links || active_path==routes.seo_settings || active_path==routes.theme_settings || active_path==routes.change_password || active_path==routes.others_settings ? 'active' : '' %>"
+            ><span class="menu-side"
+              ><img src="assets/img/icons/menu-icon-16.svg" alt=""
+            /></span>
+            <span>Settings</span></a
+          >
+        </li>
+        <li class="menu-title">UI Elements</li>
+        <li class="submenu">
+          <a href="#"
+            ><i class="fa fa-laptop"></i> <span> Components</span>
+            <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.uikit %>"
+                class="<%= active_path==routes.uikit ? 'active' : '' %>"
+                >UI Kit</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.typography %>"
+                class="<%= active_path==routes.typography ? 'active' : '' %>"
+                >Typography</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.tabs %>"
+                class="<%= active_path==routes.tabs ? 'active' : '' %>"
+                >Tabs</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><i class="fa fa-edit"></i> <span> Forms</span>
+            <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.form_basic_inputs %>"
+                class="<%= active_path==routes.form_basic_inputs ? 'active' : '' %>"
+                >Basic Inputs</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.form_input_groups %>"
+                class="<%= active_path==routes.form_input_groups ? 'active' : '' %>"
+                >Input Groups</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.form_horizontal %>"
+                class="<%= active_path==routes.form_horizontal ? 'active' : '' %>"
+                >Horizontal Form</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.form_vertical %>"
+                class="<%= active_path==routes.form_vertical ? 'active' : '' %>"
+                >Vertical Form</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#"
+            ><i class="fa fa-table"></i> <span> Tables</span>
+            <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.basic_table %>"
+                class="<%= active_path==routes.basic_table ? 'active' : '' %>"
+                >Basic Tables</a
+              >
+            </li>
+            <li>
+              <a
+                href="<%- routes.data_table %>"
+                class="<%= active_path==routes.data_table ? 'active' : '' %>"
+                >Data Table</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="<%- routes.calendar %>"
+            class="<%= active_path==routes.calendar ? 'active' : '' %>"
+            ><i class="fa fa-calendar"></i> <span>Calendar</span></a
+          >
+        </li>
+        <li class="menu-title">Extras</li>
+        <li class="submenu">
+          <a href="#"
+            ><i class="fa fa-columns"></i> <span>Pages</span>
+            <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li>
+              <a
+                href="<%- routes.login %>"
+                class="<%= active_path==routes.login ? 'active' : '' %>"
+              >
+                Login
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.register %>"
+                class="<%= active_path==routes.register ? 'active' : '' %>"
+              >
+                Register
+              </a>
+            </li>
+            <li>
+              <a href="<%- routes.forgot_password %>"
+                class="<%= active_path==routes.forgot_password ? 'active' : '' %>"
+              >
+                Forgot Password
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.change_password2 %>"
+                class="<%= active_path==routes.change_password2 ? 'active' : '' %>"
+              >
+                Change Password
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.lock_screen %>"
+                class="<%= active_path==routes.lock_screen ? 'active' : '' %>"
+              >
+                Lock Screen
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.profile %>"
+                class="<%= ( active_path==routes.profile || active_path==routes.edit_profile ) ? 'active' : '' %>"
+              >
+                Profile
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.gallery %>"
+                class="<%= active_path==routes.gallery ? 'active' : '' %>"
+              >
+                Gallery
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.pageNotFound %>"
+                class="<%= active_path==routes.pageNotFound ? 'active' : '' %>"
+                >404 Error
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.serverError %>"
+                class="<%= active_path==routes.serverError ? 'active' : '' %>"
+                >500 Error
+              </a>
+            </li>
+            <li>
+              <a
+                href="<%- routes.blank_page %>"
+                class="<%= active_path==routes.blank_page ? 'active' : '' %>"
+              >
+                Blank Page
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="javascript:void(0);"
+            ><i class="fa fa-share-alt"></i> <span>Multi Level</span>
+            <span class="menu-arrow"></span
+          ></a>
+          <ul style="display: none">
+            <li class="submenu">
+              <a href="javascript:void(0);"
+                ><span>Level 1</span> <span class="menu-arrow"></span
+              ></a>
+              <ul style="display: none">
+                <li>
+                  <a href="javascript:void(0);"><span>Level 2</span></a>
+                </li>
+                <li class="submenu">
+                  <a href="javascript:void(0);">
+                    <span> Level 2</span> <span class="menu-arrow"></span
+                  ></a>
+                  <ul style="display: none">
+                    <li><a href="javascript:void(0);">Level 3</a></li>
+                    <li><a href="javascript:void(0);">Level 3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>Level 2</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0);"><span>Level 1</span></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="logout-btn">
+        <a
+          href="<%- routes.login %>"
+          class="<%= active_path==routes.login ? 'active' : '' %>"
+          ><span class="menu-side"
+            ><img src="assets/img/icons/logout.svg" alt=""
+          /></span>
+          <span>Logout</span></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
